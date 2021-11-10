@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B7FA75A-EC72-4D9B-95F0-9B00419CDA90}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>QuanLyDiemSV</RootNamespace>
+    <AssemblyName>QuanLyDiemSV</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\DangNhapBus.cs" />
+    <Compile Include="Business\DiemBus.cs" />
+    <Compile Include="Business\KhoaHocBus.cs" />
+    <Compile Include="Business\HocPhanBus.cs" />
+    <Compile Include="Business\GiaoVienBus.cs" />
+    <Compile Include="DataAcess\DangNhapDA.cs" />
+    <Compile Include="DataAcess\GiaoVienDA.cs" />
+    <Compile Include="DataAcess\DiemDA .cs" />
+    <Compile Include="DataAcess\HocPhanDA.cs" />
+    <Compile Include="DataAcess\KhoaDA.cs" />
+    <Compile Include="DataAcess\KhoaHocDA.cs" />
+    <Compile Include="DataAcess\LopDA.cs" />
+    <Compile Include="DataAcess\SinhVienDA.cs" />
+    <Compile Include="Data\DangNhap.cs" />
+    <Compile Include="Data\Diem.cs" />
+    <Compile Include="Data\GiaoVien.cs" />
+    <Compile Include="Data\HocPhan.cs" />
+    <Compile Include="Data\Khoa.cs" />
+    <Compile Include="Data\KhoaHoc.cs" />
+    <Compile Include="Data\Lop.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\HocPhanView.cs" />
+    <Compile Include="View\DangNhapView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
